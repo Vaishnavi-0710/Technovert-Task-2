@@ -10,7 +10,9 @@ body{
 }
 .page{
     width:900px;
-    margin-left:40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .nav-header{
     display: flex;
@@ -18,29 +20,38 @@ body{
 }
 .top-right-nav-bar{
     display:flex;
-    text-align: center;
+    align-items: center;
     background-color:rgba(57,88,135,0.9);
-    padding: 2px 5px 2px 5px;
+    padding: 2px 5px 2px 5px; 
+}
+.top-right-nav-list{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 .top-right-nav-item{
     color: rgb(231, 236, 243);
-    padding: 3px;
+    display: inline-block;
     text-align: center;
     font-size: 10px;
     font-family: 'Trebuchet MS';
     letter-spacing: 0.1px;
 }
-
-.top-right-navs{
-    border-color: #85b2d6;
-    border-width: 1px;
-    border-style: solid;
-    border-top: 0;
-    border-bottom: 0;
-    border-left: 0;
-    height: 10px;
-    position: relative;
-    top:3px;
+.top-right-nav-item1{
+    color: rgb(231, 236, 243);
+    display: inline-block;
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Trebuchet MS';
+    letter-spacing: 0.1px;
+}
+.top-right-nav-item::after,.top-right-nav-item1::after{
+    content: "|";
+    padding-left: 1px;
+}
+.top-right-nav-item:last-child::after{
+    content: "";
 }
 .nav-container{
     background-color: rgba(0, 20, 31, 0.8);
@@ -52,6 +63,7 @@ body{
     display: flex;
     text-align: center;
     flex-direction: row;
+    position: relative;
     color: rgba(198, 242, 255, 0.8);
     font-family: 'Trebuchet MS';
     font-size: 16px;
@@ -61,28 +73,38 @@ body{
     border-color: rgba(209,222,235,0.15);
     border-style: solid;
     border-width: 0.25px;
-    padding-top: 10px;
-    padding-left: 5px;
+    padding: 4px 0px 4px 5px;
+}
+.nav-bar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 7.5px 0px 0px 30px; 
 }
 .nav-item{
     border:0;
     height: 20px;
-    border-right: 2px;
-    padding: 4px;
+    display: inline-block;
+    align-items: center;
 }
 .nav-item A{
     border:0;
     height: 20px;
-    border-right: 2px;
     padding: 4px;
     margin-left: 5px;
     margin-right: 5px;
+}
+.nav-item::after{
+    content:"|";
+}
+.nav-item:last-child::after{
+    content: "";
 }
 .nav-item a:hover{
     cursor: pointer;
 }
 .nav{
     color: rgba(198, 242, 255, 0.8);
+    
     text-decoration: none;
 }
 .activePage{
@@ -97,20 +119,7 @@ body{
     height:130px;
     width:190px;
     padding: 0;
-    padding-right: 34px;
     margin-left: 20px;
-}
-.divider{
-    position: relative;
-    top:7px;
-    height: 15px;
-    border-color: rgba(241, 239, 239, 0.9);
-    border-right: 0.3px;
-    border-left: 0;
-    border-top: 0;
-    border-bottom: 0;
-    border-style: solid;
-    
 }
 .main-container{
     background-color: rgba(1, 15, 29, 0.8);
